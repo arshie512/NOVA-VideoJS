@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NOVA · Primeval Run Renderer</title>
+    <style>
+      :root { color-scheme: dark; font-family: "Segoe UI", sans-serif; background: #090c0a; color: #edf1e9; }
+      * { box-sizing: border-box; }
+      body { min-height: 100vh; margin: 0; display: grid; place-items: center; padding: 30px; background: radial-gradient(ellipse at 50% 20%, #33452e 0%, #111711 42rem, #090c0a 72rem); }
+      main { width: min(100%, 960px); }
+      .kicker { margin: 0 0 10px; color: #aab78f; font: 10px/1.5 Consolas, monospace; letter-spacing: .22em; }
+      h1 { margin: 0 0 12px; font: 400 clamp(28px, 4vw, 46px)/1.1 Georgia, serif; }
+      p { max-width: 670px; color: #a5b0bb; font-size: 14px; line-height: 1.7; }
+      canvas, video { display: block; width: 100%; margin-top: 22px; border: 1px solid rgba(197,180,231,.26); background: #10150f; }
+      button { margin-top: 18px; min-height: 44px; padding: 0 19px; border: 1px solid #9b7cce; background: #211d2a; color: #f3ebff; font: 12px Consolas, monospace; letter-spacing: .13em; cursor: pointer; }
+      button:focus-visible { outline: 2px solid #d9c9f1; outline-offset: 4px; }
+      button:disabled { cursor: wait; opacity: .55; }
+      progress { width: 100%; height: 5px; margin-top: 15px; accent-color: #a47ade; }
+      #status { min-height: 24px; color: #d9dfd2; font: 11px/1.6 Consolas, monospace; letter-spacing: .04em; }
+      #preview { display: none; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="kicker">NOVA · LOCAL RENDER STUDIO</p>
+      <h1>Primeval run</h1>
+      <p>Render one five-second, 30 fps encounter at 2160p: the forest-green, purple and ash-gray T. rex chases a pink, velvet-blue and yellow Triceratops for one second, pauses for a measured face-off, then fights in one sunlit clearing until the Triceratops falls. The fight-only sound track runs through the final frame.</p>
+      <canvas id="canvas" width="1280" height="720" aria-label="Rendered dinosaur fight preview"></canvas>
+      <button id="render" type="button">RENDER PRIMEVAL RUN</button>
+      <progress id="progress" max="100" value="0"></progress>
+      <div id="status" role="status" aria-live="polite">Ready · 1-second chase + 4-second fight · 2160p UHD · 30 fps · MP4 / AAC</div>
+      <video id="preview" controls playsinline></video>
+    </main>
+    <script type="module" src="/renderer.js"></script>
+  </body>
+</html>
+

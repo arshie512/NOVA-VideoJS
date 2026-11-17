@@ -4,6 +4,11 @@ NOVA is an original Video.js v10 player skin inspired by an instrument panel in 
 
 The five-second, 4K forest fight features a T. rex and a Triceratops with an original fight soundtrack. The complete visual preview is in `public/NOVA-player-preview-4K.mp4`; it shows the player controls over the moving footage. Those controls are visual in the preview video. The interactive controls are available when the React app is running.
 
+## Preview and download
+
+- [Watch the NOVA player preview](public/NOVA-player-preview-4K.mp4)
+- [Download the complete NOVA player bundle](public/NOVA-player-spatial-dino-audio.zip)
+
 ## Run the interactive player
 
 ```sh
@@ -18,6 +23,8 @@ Open the local address printed by Vite. The player includes play/pause, seeking,
 ```sh
 pnpm build
 ```
+
+The original video, poster, soundtrack, and artwork source files are included in `public/` and `src/assets/forest-chase/`.
 
 ## Keyboard controls
 
